@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+:root {
+  --azul: #0B3D91;
+  --rojo: #FC3D21;
+  --blanco: #F2F2F2;
+  --negro: #212121;
+  --gris: #6c6c6c;
+  --grisClaro: #D0D7D9;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: var(--blanco);
+}
+/* GLOBALES */
+.contenedor {
+  width: 90%;
+  margin: 0 auto;
+}
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  margin: 0;
+  font-weight: 400;
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.6rem;
+}
+img {
+  max-height: 100%;
+}
+a {
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
+/* MAIN */
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+.left {
+  background-color: var(--blanco);
+}
+.right {
+  background-color: var(--grisClaro);
+}
+/* LEFT */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.navbar .linko {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.navLinks {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--negro);
+}
+.navbar a img {
+  display: block;
+  max-width: 6rem;
+}
+.nasaWord {
+  width: 18rem;
+  height: 18rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: absolute;
+  bottom: 0;
+  left: 2.5%;
+}
+.nasaWord h1 {
+  font-weight: bold;
+  font-size: 6rem;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+/* RIGHT */
+.right {
+  display: grid;
+  width: auto;
+  overflow: hidden;
+}
+.right img {
+  width: auto;
+  height: 100vh;
+  display: block;
+  margin: auto auto -8rem auto;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.right .btns {
+  width: 50vw;
+  height: 12rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.right .btns h4 {
+  opacity: 1;
+  color: var(--blanco);
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.right .btns svg {
+  display: none;
+}
+.btn1,
+.btn2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.btn1 {
+  background-color: var(--azul);
+}
+.btn2 {
+  background-color: var(--rojo);
+}
+/* DATE FORM */
+.dateForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  height: 50vh;
+  margin: -25vh 0 0 -45vw;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dateForm h2,
+.dateForm p {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.dateForm p {
+  flex-direction: column;
+  align-items: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 0;
+}
+.dateForm p span {
+  font-weight: bold;
+}
+.dateFields {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+.dateFields .dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.dateFields .dates label {
+  font-weight: bold;
+}
+.dateFields  input[type='date'],
+.dateFields select {
+  font-size: 1.6rem;
+  border: .1rem solid var(--negro);
+  border-radius: 1rem;
+  padding: .3rem 1rem;
+}
+.searchBtns {
+  display: flex;
+  justify-content: space-around;
+}
+.searchBtns button {
+  color: var(--blanco);
+  background-color: var(--negro);
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: .5rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 0 .3rem rgba(0 0 0 / .2);
+  height: 3.8rem;
+  width: 45%;
+}
+.searchBtns button:first-child {
+  background-color: var(--grisClaro);
+  color: var(--gris);
+}
+.searchBtns button:first-child:hover {
+  background-color: var(--blanco);
+}
+.searchBtns button svg {
+  height: 2.4rem;
+}
+.searchBtns button:hover {
+  background-color: var(--gris);
+  transition: .3s ease-in-out;
+}
+.alert {
+  position: absolute;
+  top: calc(50% + 18rem);
+  left: 50%;
+  width: 54rem;
+  height: 5rem;
+  margin: -2rem 0 0 -27rem;
+  background-color: rgba(252, 61, 33, 0.2);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.alert p {
+  font-weight: bold;
+}
+/* ASTRONOMY PHOTO OF THE DAY */
+.apodSpinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -3rem 0 0 -3rem;
+}
+.apod {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90vw;
+  max-height: 80vh;
+  margin: -32vh 0 0 -45vw;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1rem);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+.apod h4 {
+  color: var(--gris);
+  font-size: 1.6rem;
+}
+.apod h4 span {
+  font-size: 1.8rem;
+  color: var(--negro);
+}
+.apodInfo {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.4rem;
+  gap: 2rem;
+}
+.apodInfo img {
+  max-width: 100%;
+  border-radius: 1rem;
+}
+.apodInfo p {
+  margin: 0;
+  text-align: justify;
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+  height:fit-content;
+}
+.contentMenu {
+  display: flex;
+  flex-direction: column;
+}
+.contentMenu h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.contentMenu article {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: .1rem solid var(--grisClaro);
+}
+.contentMenu article:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+.closeX {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+  color: var(--gris);
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all .3s ease;
+}
+.closeX:hover {
+  background-color: rgba(252, 61, 33, 0.2);
+  color: var(--blanco);
+  cursor: pointer;
+}
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+  /* LEFT */
+  .navbar {
+    flex-direction: row;
+    max-height: 8rem;
+  }
+  .navLinks {
+    width: 50%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nasaWord {
+    width: 25rem;
+    height: 25rem;
+  }
+  /* RIGHT */
+  .right {
+    grid-template-columns: 3fr 1fr;
+  }
+  .right img {
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .right .btns {
+    width: auto;
+    height: auto;
+  }
+  .right .btns h4 {
+    opacity: 0;
+    transform: rotate(90deg);
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .right .btns svg {
+    display: flex;
+  }
+  /* RIGHT BUTTONS */
+  .btn1,
+  .btn2 {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .btn1:hover h4 {
+    opacity: 1;
+    transform: translateY(6rem) rotate(90deg);
+    transition: .2s ease-in-out .2s;
+  }
+  .btn1:hover svg{
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: .3s ease-in-out;
+  }
+  .btn2:hover h4 {
+    opacity: 1;
+    transform: translateY(-6rem) rotate(90deg);
+    transition: .2s ease-in-out .2s;
+  }
+  .btn2:hover svg{
+    opacity: 0;
+    transform: translateY(10rem);
+    transition: .3s ease-in-out;
+  }
+  /* DATE FORM */
+  .dateForm {
+    width: 54rem;
+    height: 28rem;
+    margin: -10rem 0 0 -27rem;
+    padding: 2.4rem;
+  }
+  .dateForm p {
+    flex-direction: row;
+  }
+  .dateFields {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0;
+  }
+  /* APOD */
+  .apod {
+    top: 8rem;
+    left: 15%;
+    right: 15%;
+    width: auto;
+    max-height: calc(100vh - 10rem);
+    margin: 0;
+    padding: 2.4rem;
+  }
+  .apodInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 350px) {
+  .right .btns h4 {
+    font-size: 1.2rem;
+  }
+  .dateForm, .apod {
+    height: 70vh;
+    margin-top: -25vh;
+  }
+  .dateForm h2 {
+    font-size: 2.4rem;
+  }
+  .searchBtns svg {
+    display: none;
+  }
+  .apod h2 {
+    font-size: 2.4rem;
+  }
+}
